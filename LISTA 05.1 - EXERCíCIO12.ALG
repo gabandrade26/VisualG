@@ -7,29 +7,38 @@ Algoritmo "Lista 05.1 - Exercício12"
 //da média
 
 Var
-// Seção de Declarações das variáveis 
-num, maior, menor: real
-acumulador, contador: inteiro
+   // Seção de Declarações das variáveis
+   num: real
+   maior: real
+   menor: real
+   acumulador: real
+   contador: inteiro
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
-escreva("Me informe um número qualquer:")
-leia(num)
-acumulador <- 0
-contador <- -1
-maior <- num
-menor <- num
-enquanto (num != -1) faca
-         escreval("Me informe um número qualquer:")
-         acumulador <- acumulador + num
-         contador <- contador + 1
-         media <- acumuldor / contador
-         se (num > maior) entao
-            num <- maior
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Me informe um número:")
+   leia(num)
+   contador <- 0
+   acumulador <- 2
+   maior <- num
+   menor <- num
+   enquanto (num <> -1) faca
+      escreva("Me informe um número:")
+      leia(num)
+      acumulador <- acumulador + num
+      contador <- contador + 1
+      se (maior < num) entao
+         maior <- num
+         se (menor > num) entao
+            menor <- num
+            se (num = -1) entao
+               escreval("Você inseriu -1 como resposta")
+            fimse
          fimse
-         se (num < menor) entao
-            num <- menor
-         fimse
-fimenquanto
-         
+      fimse
+   fimenquanto
+   escreval("O maior número é", maior)
+   escreval("O menor número é", menor)
+   escreval("A média dos números são", ((acumulador) / contador))
+
 Fimalgoritmo
