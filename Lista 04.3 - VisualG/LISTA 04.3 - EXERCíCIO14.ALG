@@ -7,7 +7,7 @@ Algoritmo "Lista 04.3 - Exercício14"
 Var
    // Seção de Declarações das variáveis
    contador: inteiro
-   nota1, nota2: real
+   nota1, nota2, media: real
    nome: caracter
 
 Inicio
@@ -19,13 +19,13 @@ Inicio
       leia(nota1)
       escreva("Nota2:")
       leia(nota2)
-      se ((nota1 + nota2)/ 2 >= 5) entao
+      media <- nota1 + nota2
+      se (media / 2 >= 5) entao
          escreval("Situação: APROVADO")
       senao
          escreval("Situação: REPROVADO")
       fimse
    fimpara
-   escreval((nota1 + nota2) / 2)
 
 
 Fimalgoritmo

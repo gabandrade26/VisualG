@@ -16,15 +16,18 @@ Inicio
       escreva("Salário:")
       leia(salario)
       se (salario < 600) entao
-         escreva("Aliquota: Isento")
+         escreval("Aliquota: Isento")
       fimse
-      se ((salario >= 600) e (salario < 1499.99)) entao
+      se ((600 <= salario) e (salario < 1500)) entao
          escreval("Aliquota:", salario * 10/100)
-         escreval("Salário atual:", salario + (salario * 10/100))
+         escreval("Salário atual:", salario - (salario * 10/100))
       senao
-         escreval("Aliquota:", salario * 15/100)
-         escreval("Salário atual:", salario + (salario * 15/100))
+           se (salario >= 1500) entao
+              escreval("Aliquota:", salario * 10/100)
+              escreval("Salário atual:", salario - (salario * 10/100))
+           fimse
       fimse
+
    fimpara
 
 
